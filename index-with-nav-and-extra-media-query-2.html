@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Break point demo</title>
+	
+	<!-- viewport http://enva.to/1aPsumr -->
+	<meta name="viewport" content="initial-scale=1">
+	
+	<style>
+	* {
+		-moz-box-sizing: border-box; 
+		-webkit-box-sizing: border-box; 
+		box-sizing: border-box;
+		padding: 0;
+		margin: 0;
+		color: #4b4b4b;
+		-webkit-font-smoothing: antialiased;
+  	}
+  	
+  	p {
+	  	line-height: 26px;
+	  	margin-bottom: 16px;
+  	}
+  	
+  	h3 {
+	  	font-size: 42px;
+	  	line-height: 50px;
+	  	margin-bottom: 16px;
+	  	letter-spacing: -.03em;
+  	}
+ 
+	.col-first {
+		background: #2a3038;
+		padding: 60px 30px;
+	}
+	
+	.col-second {
+		background: #fcfcfc;
+		padding: 60px 30px;
+	}
+	
+	/*nav stuff*/
+	a.menu-link {
+	    float: right;
+	    color: white;
+	    padding: 0 20px;
+	    text-decoration: none;
+	    font-size: bold;
+	}
+	.js nav[role=navigation] {
+		overflow: hidden;
+		max-height: 0;
+	}
+	nav[role=navigation].active {
+		max-height: 55em;
+	}
+	
+	nav ul {
+		margin-bottom: 30px;
+	}
+	
+	nav ul li {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	
+	nav ul li strong {
+		color: tomato;
+		padding: 10px 5px;
+		display: inline-block;	
+	}
+	
+	nav ul li a {
+		color: #a9b0b8;
+		text-decoration: none;
+		padding: 5px;
+		display: inline-block;	
+	}
+	
+	nav ul li a:hover {
+		color: #f8f8f8;
+	}
+	
+	@media screen and (min-width: 800px) {
+	
+		.col-first {
+			width: 20%;
+			float: left;
+			min-height: 800px;
+			position: fixed;
+			min-height: 100%;
+		}
+		
+		.col-second {
+			float: left;
+			min-height: 800px;
+			padding-left: 25%;
+			padding-right: 80px;
+		}
+		
+		/*nav stuff*/
+		a.menu-link {
+		   display: none;
+		}
+		.js nav[role=navigation] {
+			max-height: none;
+		}
+			
+	}
+	
+	@media screen and (max-height:500px) {
+		.col-first {
+			height: 100%;
+			overflow: scroll;
+		}
+	}
+			
+	</style>
+	
+	
+</head>
+<body>
+
+<div class="container">
+	<div class="col-first">
+	
+		<a href="#menu" class="menu-link">Menu</a>
+		
+		<nav id="menu" role="navigation">
+			<ul>
+				<li><strong>Main</strong></li>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Clients</a></li>
+				<li><a href="#">Contact Us</a></li>
+			</ul>
+			
+			<ul>
+				<li><strong>Social</strong></li>
+				<li><a href="#">Facebook</a></li>
+				<li><a href="#">Twitter</a></li>
+				<li><a href="#">Dribbble</a></li>
+			</ul>
+			
+			<ul>
+				<li><strong>Swiss Cheese</strong></li>
+				<li><a href="#">Ham</a></li>
+				<li><a href="#">Mrs.Miggins</a></li>
+				<li><a href="#">Rubbish </a></li>
+			</ul>
+		</nav>
+	
+	</div>
+	<div class="col-second">
+	
+		<h3>Here's Some Lovely Scrolling Content</h3>
+		
+		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+		
+		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+		
+		<p>Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis.</p>
+		
+		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+		
+		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+		
+		<p>Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis.</p>
+		
+		<p>Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+		
+		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+		
+		<p>Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis.</p>
+		
+		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+		
+		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+		
+		<p>Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis.</p>
+		
+		<p>Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+		
+		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+		
+	</div>
+</div>
+	
+	<!--butchered nav toggle, in basis from Brad Frost-->
+	<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+	<script>
+	$(document).ready(function() {
+	  $('body').addClass('js');
+	  var $menu = $('#menu'),
+	    $menulink = $('.menu-link');
+	  
+	$menulink.click(function() {
+	  $menulink.toggleClass('active');
+	  $menu.toggleClass('active');
+	  return false;
+	});});
+	</script>
+	
+</body>
+</html>
